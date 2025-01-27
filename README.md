@@ -1,50 +1,70 @@
-# React + TypeScript + Vite
+# Palindrome Checker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A small TypeScript project developed as part of a school assignment to check if a given string is a palindrome.
 
-Currently, two official plugins are available:
+## Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Overview](#overview)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Technologies Used](#technologies-used)
+- [License](#license)
 
-## Expanding the ESLint configuration
+## Overview
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+The **Palindrome Checker** is a web application built using TypeScript and React. It allows users to input a string and checks whether the string is a palindrome (reads the same backward as forward). The app uses a simple algorithm to clean and validate the input and provides immediate feedback.
 
-- Configure the top-level `parserOptions` property like this:
+## Features
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- Clean and intuitive UI for entering text.
+- Real-time palindrome checking on form submission.
+- Strips non-alphanumeric characters and ignores case sensitivity.
+- Lightweight and fast implementation with modern web technologies.
+
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/JonathanGian/palindrome-checker.git
+   cd palindrome-checker
+   ```
+
+2. Install dependencies:
+```bash
+npm install
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+3. Start the development server:
+```bash
+npm run dev
 ```
+
+3. Open in your browser:
+```http
+http://localhost:5173
+```
+
+## Usage
+
+1. Type a word or sentence into the input field.
+
+2. Click the "Check" button.
+
+3. The app will display "Yes, it is a palindrome." if the input is a palindrome, or "No, it is not a palindrome." otherwise.
+
+### Example Inputs
+
+- Input: `"Racecar"` → Output: `Yes`
+- Input: `"Hello"` → Output: `No`
+- Input: `"A man, a plan, a canal: Panama"` → Output: `Yes`
+
+## Technologies Used
+
+- **TypeScript**
+- **React**
+- **HTML/CSS**
+
+## License
+
+This project is for educational purposes only and is not licensed for commercial use.

@@ -19,7 +19,7 @@ function App() {
     const inputValue = inputElement.value;
     const isPalindrome = palindromeChecker(inputValue);
   
-    setResult(isPalindrome ? 'Yes, it is a palindrome.' : 'No, it is not a palindrome.');
+    setResult(isPalindrome ? "Yes, it is a palindrome." : "No, it is not a palindrome.");
   };
 
   return (
